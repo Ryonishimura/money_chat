@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 使い方
 
-Things you may want to cover:
+このアプリケーションを動かす場合は、まずはリポジトリを手元にクローンしてください。
+その後、Railsサーバーを立ち上げてください。
 
-* Ruby version
+```
+$ rails server
+```
 
-* System dependencies
+まずは、ユーザーの新規登録をします。そうすると、ユーザー一覧のページが表示されるはずです。
 
-* Configuration
+その後、チャットをしたいユーザーをクリックして、そのユーザーのページに飛んでください。
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+”チャットする”ボタンを押すと、自動的にそのユーザーとのチャット画面に飛ぶはずです。
