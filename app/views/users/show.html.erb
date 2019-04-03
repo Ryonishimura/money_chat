@@ -1,0 +1,20 @@
+<h1>ユーザー詳細</h1>
+
+<h2><%= @user.email %></h2>
+
+<% if @user.id == current_user.id %>
+  <h2>マイページ</h2>
+<% else %>
+  <% if @isRoom == true %>
+    <p class="chatstartp"><a class="chatstarta" href="/rooms/<%= @roomId %>">チャットをする</a>
+  <% else %>
+    <%= form_for @room do |f| %>
+      <%= fields_for @entry do |e| %>
+        <%= e.hidden_field :user_id, :value=> @user.id %>
+      <% end %>
+      <div class="chatstartb"><%= f.submit "チャットを始める" %></div>
+    <% end %>
+  <% end %>
+<% end %>
+
+<p class="backindexp"><%= link_to "ユーザー一覧に戻る", users_path %></p>

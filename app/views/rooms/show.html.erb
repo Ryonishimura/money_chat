@@ -1,0 +1,46 @@
+<p class="member-p">参加者</p>
+<div class="room-member">
+
+<% @entries.each do |e| %>
+  <h5><strong><a href="/users/<%= e.user.id %>"><%= e.user.email%>さん</a></strong></h5>
+<% end %>
+</div>
+
+<% if @messages.present? || @prices.present? %>
+  <div class="room-message">
+    <h3>メッセージ</h3>
+    <% @messages.each do |m| %>
+      <p class="message-content"><strong><%= m.content %></strong>
+      <small>by <a href="/users/<%= m.user_id %>"><%= m.user.email %>さん</a></small><%= m.created_at.strftime("%Y年%m月%d日 %H時%M分") %></p>
+
+      <br>
+    <% end %>
+  </div>
+  <div class="room-message">
+    <h3>貸し借り</h3>
+    <% @prices.each do |pr| %>
+      <p class="message-content"><strong><%= pr.amount %></strong>
+      <small>by <a href="/users/<%= pr.user_id %>"><%= pr.user.email %>さん</a></small><%= pr.created_at.strftime("%Y年%m月%d日 %H時%M分") %></p>
+      <br>
+    <% end %>
+
+  </div>
+
+<% else %>
+  <h3 class="text-center">メッセージはまだありません</h3>
+<% end %>
+
+<%= form_for @message do |f| %>
+  <p class="message-box"><%= f.text_field :content, :placeholder => "メッセージを入力して下さい" , :size => 70 %></p>
+  <%= f.hidden_field :room_id, :value => @room.id %>
+
+  <p class="message-submit"><%= f.submit "投稿する" %></p>
+<% end %>
+<%= form_for @price do |r| %>
+  <p class="message-box"><%= r.text_field :amount, :placeholder => "金額を入力して下さい" , :size => 70 %></p>
+  <%= r.hidden_field :room_id, :value => @room.id %>
+
+  <p class="message-submit"><%= r.submit "投稿する" %></p>
+<% end %>
+
+<p class="backindexp"><%= link_to "ユーザー一覧に戻る", users_path %></p>

@@ -1,0 +1,125 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+h2{
+  margin-top: 20px;
+  color: #00B900;
+  text-align: center;
+  border-bottom: dashed 2px black;
+  padding-bottom: 10px;
+}
+.user-index{
+  padding: 0 15px;
+  text-align: center;
+}
+.user-indexp{
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.user-indexs{
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #FFF;
+  background: #00B900;
+  font-size: 28px;
+  border-radius: 5px;
+}
+.index-logout a{
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #00B900;
+  border: solid 2px #00B900;
+  border-radius: 3px;
+  transition: .4s;
+}
+.index-logout a:hover{
+  background: #00B900;
+  color: white;
+}
+
+
+.usersp{
+  margin-bottom: 15px;
+}
+.usersa{
+  color: black;
+  text-decoration: none;
+}
+.usersa:hover{
+  background-color: #00B900;
+  color: white;
+}
+.chatstartp{
+  text-align: center;
+  margin-top: 70px;
+}
+.chatstarta{
+  text-decoration: none;
+  color: #00B900;
+  border: solid 2px #00B900;
+  padding: 50px 10px;
+  border-radius: 50%;
+}
+.chatstarta:hover{
+  background: #00B900;
+  color: white;
+}
+.chatstartb{
+  margin-top: 10px;
+  text-align: center;
+}
+.chatstartb input{
+  text-decoration: none;
+  color: #00B900;
+  border: solid 2px #00B900;
+  padding: 70px 15px;
+  border-radius: 50%;
+  font-size: 18px;
+}
+.chatstartb input:hover{
+  background: #00B900;
+  color: white;
+}
+.backindexp{
+  text-align: center;
+}
+.backindexp a{
+  margin-top: 70px;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #00B900;
+  border: solid 2px #00B900;
+  border-radius: 3px;
+  transition: .4s;
+  margin-bottom: 30px;
+}
+.backindexp a:hover{
+  background: #00B900;
+  color: white;
+}
+.user-index-guest{
+  text-align: center;
+  height: 700px;
+  padding-top: 330px;
+  background-image: url("/friends2.jpg");
+  background-size: cover;
+  box-sizing: border-box;
+}
+.user-index-guest a{
+  display: inline-block;
+  padding: 1em 5em;
+  text-decoration: none;
+  color: #00B900;
+  border: solid 2px #00B900;
+  background-color: white;
+  border-radius: 10px;
+  transition: .4s;
+  margin-bottom: 80px;
+}
+.user-index-guest a:hover {
+  background: #00B900;
+  color: white;
+}

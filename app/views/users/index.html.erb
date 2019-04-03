@@ -1,0 +1,18 @@
+
+<% if user_signed_in? %>
+<h2>こんにちは　<%= current_user.email %>　さん</h2>
+<div class="user-index">
+  <p class="user-indexp"><span class="user-indexs">ユーザー一覧</span></p>
+    <% @users.each do |u| %>
+    <p class="usersp"><a class="usersa" href="/users/<%= u.id %>"><%= u.email %>さん</a></p>
+
+    <% end %>
+    <div class="index-logout"><%= link_to "ログアウト", destroy_user_session_path, :method => :delete %></div>
+</div>
+<% else %>
+<div class="user-index-guest">
+  <%= link_to "ユーザー登録する", new_user_registration_path %>
+  <br>
+  <%= link_to "ログインする", new_user_session_path %>
+</div>
+<% end %>

@@ -1,0 +1,3 @@
+class TotalsController < ApplicationController
+  
+end

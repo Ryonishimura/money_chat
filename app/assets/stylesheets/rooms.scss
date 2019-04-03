@@ -1,0 +1,73 @@
+// Place all the styles related to the rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.room-member{
+  text-align: center;
+}
+.room-member h5{
+  margin-top: 15px;
+}
+.room-member h5 a{
+  display: inline-block;
+  color: #FFF;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background-image: linear-gradient(-90deg, #246156, #00B900);
+  transition: .5s;
+  background-size: 200%;
+  font-size: 18px;
+}
+.room-member h5 a:hover {
+  background-position: right center;
+}
+.member-p{
+  text-align: center;
+  color: #00B900;
+  font-weight: bold;
+  font-size: 24px;
+  margin-top: 10px;
+}
+.room-message{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 0.5em 1em;
+  background: #CAEA78;
+  border-bottom: solid 6px #4F5F3B;
+  border-radius: 9px;
+}
+.message-content{
+}
+.message-box{
+  text-align:center;
+}
+.message-box input{
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0 1.5em 15px;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  font-size: 16px;
+  background:#CAEA78;
+}
+.message-submit{
+  text-align: center;
+}
+.message-submit input{
+  display: inline-block;
+  max-width: 180px;
+  text-align: left;
+  background-color: #00B900;
+  font-size: 16px;
+  color: #FFF;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 4px;
+  border-bottom: 4px solid #4F5F3B;
+}
+.message-submit input:active {
+    transform: translateY(4px);
+    border-bottom: none;
+}
